@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./Imágenes/Logo_m.png">
+    <title>SunFlower systems</title>
+</head>
+<style>
+    body {
+        font-family: 'Catamaran', sans-serif;
+        background-color: rgba(107, 191, 89, 0.1);
+        margin: 20px;
+        margin-left: 10%;
+        margin-right: 10%;
+        /*border: 1px solid #04773b;*/
+    }
+    .header {
+        max-width: 1600px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        flex-wrap: wrap;
+        border-bottom: 5px solid #04773b;
+        /*border-radius: 15px;*/
+        padding-bottom: 15px;
+        margin-bottom: 35px;
+        padding-top: 15px;
+        /*position: fixed;*/
+        /*box-shadow: 0px 10px 6px #04773b;*/
+    }
+    h1 {
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2em;
+        color: #03440C;
+    }
+    h2 {
+        padding-left: 5px;
+        margin-bottom: 15px;
+    }
+    h3 {
+        padding-left: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .intro-p {
+        text-align: justify;
+    }
+    .intro-img {
+        text-align: center;
+    }
+    .main-cont {
+        flex: 0;
+    }
+    .logo {
+        margin: 0;
+    }
+    .logo img {
+        justify-content: center;
+    }
+    .menu li {
+        list-style: none;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    .header ul {
+        display: flex;
+    }
+    .menu > ul > li > a {
+        text-decoration: none;
+        color: #03440C;
+        font-weight: bold;
+        font-size: 25px;
+        padding: 0 5px;
+        margin: 0 100px;
+    }
+    .menu li ul {
+        display: none;
+        position: absolute;
+        text-align: left;
+        background-color: rgba(107, 191, 89);
+        
+    }
+    .menu>ul>li>a:hover {
+        /*background-color: rgba(107, 191, 89, 0.2);*/
+        border: 2px solid #04773b;
+        border-radius: 10px;
+    }
+    
+    .menu li:hover > ul {
+        display: block;
+    }
+    .menu ul>li>ul>li>a:hover {
+        text-decoration: underline;
+    }
+    .menu ul>li>ul>li>a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #03440C;
+        font-weight: bold;
+        position: relative;
+        margin: 0 100px;
+    }
+    .calculus {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .event {
+        /*border: 1px solid black;*/
+        border: 2px solid #04773b;
+        border-radius: 15px;
+        margin: 0.9%;
+        width: 66%;
+        background-color: rgba(107, 191, 89, 0.15)
+    }
+    .event_img {
+        /*border: 1px solid black;*/
+        margin: 0.9%;
+        width: 30%;
+        justify-content: center;
+        text-align: center;
+    }
+    .cont_1 {
+        display: flex;
+        padding: 5px;
+        justify-content: space-evenly;
+    }
+    .event p {
+        padding: 10px 10px;
+        margin: 0 10px;
+    }
+    .event h4 {
+        padding: 10px 20px;
+        margin: 0 10px;
+    }
+    .section_1 {
+        max-width: 48%;
+        /*border: 1px solid black;*/
+        padding: 5px;
+        margin: 5px;
+    }
+    .contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 180px;
+        border: 2px solid #04773b;
+        border-radius: 15px;
+        justify-content: space-between;
+    }
+    .contact-cont {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 1;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .contact p {
+        margin: 0;
+        padding-left: 10px;
+        line-height:23px;
+    }
+    .social {
+        padding: 15px;
+    }
+    .social-network {
+        padding-right: 5px;
+    }
+    .social-link.twitter {
+        background-image: url(./Iconos/twitter.png);
+    }
+    .social-link.facebook {
+        background-image: url(./Iconos/facebook.png);
+    }
+    .social-link.instagram {
+        background-image: url(./Iconos/instagram.png);
+    }
+    .social-link.youtube {
+        background-image: url(./Iconos/youtube.png);
+    }
+    .social-link {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 10px 10px;
+        background-size: 50px 50px;
+    }
+    .footer {
+        font-weight: bold;
+        color: black;
+        justify-content: center;
+        text-align: center;
+    }
+    .footer a {
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+    .article {
+        display: flex;
+        height: 25px;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .chart {
+        width: 80px;
+    }
+    .chart_1 {
+        width: 43px;
+    }
+    .months {
+        display:flex;
+    }
+    .intro {
+        text-align: justify;
+    }
+    @media screen and (max-width: 1702px){
+        body {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .menu > ul > li > a {
+            margin: 0 70px;
+        }
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="main-cont">
+            <figure class="logo">
+                <img src="./Imágenes/logo_.png" width="200" alt="SunFlower systems">
+            </figure>
+            <nav class="menu">
+                <ul>
+                    <li>
+                        <a class="link" href="#Inicio">Inicio</a>
+                    </li>
+                    <li>
+                        <a class="link" href="">Tipo de sistema</a>
+                        <ul>
+                            <li>
+                                <a class="link" href="#Sistema_autónomo_t">Sistema autónomo</a>
+                            </li>
+                            <li>
+                                <a class="link" href="#Sistema_conectado_a_la_red_t">Sistema conectado a la red</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="link" href="">Cálculo del sistema</a>
+                        <ul>
+                            <li>
+                                <a class="link" href="#Sistema_autónomo">Sistema autónomo</a>
+                            </li>
+                            <li>
+                                <a class="link" href="#Sistema_conectado_a_la_red">Sistema conectado a la red</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="link" href="#Contacto">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1 id="Inicio">Introducción</h1>
+    <section  class="intro">
+        <p class="intro-p">Actualmente el planeta está sufriendo grandes efectos negativos debido al cambio climático, lo que conlleva al aumento de la temperatura, causando derretimiento de los glaciares y
+        polos, aumento del nivel del mar, inundaciones, sequías, agravamiento de los procesos de desertificación, además de la pérdida de flora y fauna. Por todo lo anteriormente escrito, todas las personas del mundo debemos
+        ser concientes del daño que se está produciendo en el planeta, por lo cual, se deben buscar soluciones y alternativas que logren mitigar estos efectos.</p><p>Una de las áreas que puede dar un gran aporte
+        para mitigar el cambio climático, es el de la generación de la energía eléctrica. Es bien sabido que los gases provenientes del uso de carbón o combustibles fósiles causan la elevación de la temperatura al absorber 
+        la radiación térmica despedida por la superficie de la Tierra, lo que lleva a que el uso de fuentes limpias de energía debe ser implementado de manera inmediata.</p><p>Una de las fuentes de generación de
+        energía eléctrica más límpias que existe es la solar fotovoltaica, ya que, no hay emisiones de gases de efecto invernadero, además de tener otras grandes ventajas, las cuales son: costes relativamente bajos en su funcionamiento
+        y mantenimiento, se puede instalar en cualquier lugar donde puedan caer los rayos del sol y pueden ayudar a suplir picos de demanda eléctrica.</p>
+        <div class="intro-img">
+            <img class="img-intro" src="./Imágenes/f1.png" width="1000" alt="Sistema fotovoltaico">
+        </div>
+    </section>
+    <h1 id="Teoría">Tipos de sistemas fotovoltaicos</h1>
+    <section  class="theory">
+        <h2 id="Sistema_autónomo_t">Sistema autónomo</h2>
+        <p class="theory-p">Un sistema fotovoltaico autónomo convierte la energía proveniente del sol en energía eléctrica, la cual es almacenada en baterías para usarla posteriormente. No requiere de interconexión
+        a la red eléctrica, lo que conlleva a que se adapte bien a lugares alejados y con buenas condiciones solares donde la red eléctrica no se encuentre presente, siendo una buena solución para energizar una vivienda
+        o algún lugar en específico.</p><p>Este tipo de sistema se caracteriza por el uso de de reguladores</p>
+        <h2 id="Sistema_conectado_a_la_red_t">Sistema conectado a la red</h2>
+        <p class="theory-p">Un sistema conectado a la red consiste básicamente en un generador fotovoltaico acoplado  a un inversor que opera en paralelo con la red eléctrica convencional. El SFCR es compatible con 
+            un amplio margen de aplicaciones las cuales pueden ir desde centrales de varios megavatios hasta pequeños sistemas.</p>
+            <p>Inicialmente, se debe seleccionar la ciudad y el tipo de establecimiento en la cual se va a instalar el sistema fotovoltaico, para así, por medio de la página web de la NASA, obtener la radiación mensual
+            en la zona. Para el cálculo de la energía y potencia del generador fotovoltaico, se debe tener en cuenta el factor de rendimiento del sistema.</p>
+    </section>
+    <h1>Cálculos</h1>
+    <h2>Sistema autónomo</h2>
+    <section id="Sistema_autónomo" class="calculus">
+        <article class="event">
+            <h3>Cálculo</h3>
+            <h4>Carga AC (120 V)</h4>
+            <div class="cont_1">
+                <div class="section_1">
+                    <div class="article">
+                        <p>Tomacorrientes: </p>
+                        <div>
+                            <select name="list" required="required" autocomplete="off" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Consolas de video juegos: </p>
+                        <div>
+                            <select name="list" required="required" autocomplete="off" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Televisores: </p>
+                        <div>
+                            <select name="list" required="required" autocomplete="off" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p><strong>Total: </strong></p>
+                        <div>
+                            <input type="text" class="chart_1">
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div>
+                            <input type="button" value="Calcular" class="chart">
+                        </div>
+                    </div>
+                </div>
+                <div class="section_1">
+                    <div class="article">
+                        <p>Computadores: </p>
+                        <div>
+                            <select name="list" required="required" autocomplete="off" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Bombillos: </p>
+                        <div>
+                            <select name="list" required="required" autocomplete="off" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Hornos microondas: </p>
+                        <div>
+                            <select name="list" required="required" autocomplete="off" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p><strong>Total: </strong></p>
+                        <div>
+                            <input type="text" class="chart_1">
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div>
+                            <input type="button" value="Calcular" class="chart">
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <h4>Carga DC (12 V)</h4>
+            <div class="cont_1">
+                <div class="section_1">
+                    <div class="article">
+                        <p>Luminarias tipo LED: </p>
+                        <div>
+                            <select name="list" required="required" autocomplete="off" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <!--<div class="article">
+                        <p>Consolas de video juegos: </p>
+                        <div>
+                            <select name="list" required="required" autocomplete="off" id="">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                        </div>
+                    </div>-->
+                    <div class="article">
+                        <p><strong>Total: </strong></p>
+                        <div>
+                            <input type="text" class="chart_1">
+                            <input type="text" placeholder="Potencia [W]" class="chart">
+                            <input type="text" placeholder="Uso [h]" class="chart_1">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div>
+                            <input type="button" value="Calcular" class="chart">
+                        </div>
+                    </div> 
+                </div>
+            </div>
+            <h4>Energía total en DC</h4>
+        </article>
+        <article class="event_img">
+            <img src="./Imágenes/f2.png" width="450" alt="Imagen">
+        </article>
+    </section>
+    <h2>Sistema conectado a la red</h2>
+    <section id="Sistema_conectado_a_la_red" class="calculus">
+        <article class="event">
+            <h3>Cálculo</h3>
+            <h4>Condiciones de radiación mensual y consumo mensual del establecimiento:</h4>
+            <div class="cont_1">
+                <div class="section_1">
+                    <div class="article">
+                        <p><strong>Mes </strong></p>
+                        <div>
+                            <p><strong>Radiación [kWh-día/m^2]</strong></p>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Enero: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Febrero: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Marzo: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Abril: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Mayo: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Junio: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Julio: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Agosto: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Septiembre: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Octubre: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Noviembre: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Diciembre: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p><strong>Total: </strong></p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div>
+                            <input type="button" value="Calcular" class="chart">
+                        </div>
+                    </div>
+                </div> 
+                <div class="section_1">
+                    <div class="article">
+                        <p><strong>Mes </strong></p>
+                        <div>
+                            <p><strong>Energía [kWh-mes]</strong></p>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Enero: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                            </div>
+                    </div>
+                    <div class="article">
+                        <p>Febrero: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Marzo: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Abril: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Mayo: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Junio: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Julio: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Agosto: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Septiembre: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Octubre: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Noviembre: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p>Diciembre: </p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p><strong>Total: </strong></p>
+                        <div>
+                            <input type="text"  class="chart">
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div>
+                            <input type="button" value="Calcular" class="chart">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="event_img">
+            <img src="./Imágenes/f3.png" width="450" alt="Imagen">
+        </article>
+    </section>
+    <section id="Contacto" class="contact">
+        <div class="contact-cont">
+            <form action="/Contacto/" class="social">
+                <h2>Contacto</h2>
+                <p>Correo electrónico: camiloge_91@hotmail.com</p>
+                <p>Número celular: -------- </p>
+                <p>Bogotá D.C., Colombia</p>
+            </form>
+            <div class="social-network">
+                <a href="https://twitter.com/camiloguzman_91" class="social-link twitter"></a>
+                <a href="https://www.facebook.com/Camilo.Guzman91" class="social-link facebook"></a>
+                <a href="https://www.instagram.com/camiloguzman_91/" class="social-link instagram"></a>
+                <a href="https://www.youtube.com/channel/UCVsWK0bZ2ya6eAK7LjBtDQg?view_as=subscriber" class="social-link youtube"></a>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer-cont">
+            <div>
+                <p>Designed by 
+                    <a href="https://camiloguzman91.github.io/portafolio/" target="blank">@camiloguzman_91</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
