@@ -182,5 +182,6 @@ function calc2(operation3) {
     }
 
     var result11 = document.getElementById("result11").value = result11;
+    var result11 = document.getElementById("result11t").value = result11;
 
 } 
