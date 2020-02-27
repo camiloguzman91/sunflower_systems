@@ -605,7 +605,8 @@
     <section id="Sistema_conectado_a_la_red" class="calculus">
         <article class="event">
             <h3>Cálculo</h3>
-            <h4>Condiciones de radiación mensual [kWh-día/m^2] - Consumo mensual del establecimiento [kWh-mes] - Potencia del generador fotovoltaico [kW]:</h4>
+            <h4>Condiciones de radiación mensual [kWh-día/m^2] - Consumo mensual del establecimiento [kWh-mes] - Potencia del generador fotovoltaico [kW],
+                teniendo en cuenta como factor de rendimiento del sistema=0.85:</h4>
             <div class="cont_1">
                 <div class="section_1">
                     <div class="article">
@@ -765,6 +766,12 @@
                                 document.getElementById('result11').value = '';
                                 ">Reiniciar
                             </button>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <p><strong>Potencia del generador fotovoltaico [kW]: </strong></p>
+                        <div>
+                            <input type="text" id="result11t" class="chart" readonly>
                         </div>
                     </div>
                 </div> 
