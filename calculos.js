@@ -206,7 +206,7 @@ function calc3(operation4) {
     var fdi = document.getElementById("fdi").value = fdi;
     
     if (pnominv == "0") {
-        alert("No se permiten campos vacios en: Factor de dimensionamiento del inversor:");
+        alert("No se permiten campos vacios en: Factor de dimensionamiento del inversor");
     }
 
 }
@@ -226,7 +226,7 @@ function calc4(operation5) {
     var modu = document.getElementById("modu").value = modu;
     
     if (pmaxmod == "0") {
-        alert("No se permiten campos vacios en: Número de módulos:");
+        alert("No se permiten campos vacios en: Número de módulos");
     }
 
 }
