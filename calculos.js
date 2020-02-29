@@ -219,7 +219,7 @@ function calc4(operation5) {
 
     switch(operation5) {
         case 1:
-            modu = ((result11 * 1000) / pmaxmod);
+            modu = Math.ceil(((result11 * 1000) / pmaxmod));
         break;
     }
 
