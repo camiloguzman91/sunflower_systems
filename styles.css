@@ -1,0 +1,368 @@
+body {
+    font-family: 'Catamaran', sans-serif;
+    background-color: rgba(107, 191, 89, 0.1);
+    margin: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    /*border: 1px solid #04773b;*/
+}
+.header {
+    max-width: 1600px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: wrap;
+    border-bottom: 5px solid #04773b;
+    /*border-radius: 15px;*/
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+    padding-top: 15px;
+    /*position: fixed;*/
+    /*box-shadow: 0px 10px 6px #04773b;*/
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #03440C;
+}
+h2 {
+    padding-left: 5px;
+    margin-bottom: 15px;
+}
+h3 {
+    padding-left: 12px;
+    margin-bottom: 10px;
+}
+
+.intro-p {
+    text-align: justify;
+}
+.intro-img {
+    text-align: center;
+}
+.main-cont {
+    flex: 0;
+}
+.logo {
+    margin: 0;
+}
+.logo img {
+    justify-content: center;
+}
+.menu li {
+    list-style: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+.header ul {
+    display: flex;
+}
+.menu > ul > li > a {
+    text-decoration: none;
+    color: #03440C;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0 5px;
+    margin: 0 100px;
+}
+.menu li ul {
+    display: none;
+    position: absolute;
+    text-align: left;
+    background-color: rgba(107, 191, 89);
+    
+}
+.menu>ul>li>a:hover {
+    /*background-color: rgba(107, 191, 89, 0.2);*/
+    border: 2px solid #04773b;
+    border-radius: 10px;
+}
+
+.menu li:hover > ul {
+    display: block;
+}
+.menu ul>li>ul>li>a:hover {
+    text-decoration: underline;
+}
+.menu ul>li>ul>li>a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #03440C;
+    font-weight: bold;
+    position: relative;
+    margin: 0 100px;
+}
+.calculus {
+    display: flex;
+    flex-wrap: wrap;
+}
+.event {
+    /*border: 1px solid black;*/
+    border: 2px solid #04773b;
+    border-radius: 15px;
+    margin: 0.9%;
+    width: 66%;
+    background-color: rgba(107, 191, 89, 0.15)
+}
+.event_img {
+    /*border: 1px solid black;*/
+    margin: 0.9%;
+    width: 30%;
+    justify-content: center;
+    text-align: center;
+}
+.event_img img{
+    max-width: 450px;
+    max-height: 332.5px;
+    width: 100%;
+    height: 100%;
+}
+.cont_1 {
+    display: flex;
+    padding: 5px;
+    justify-content: space-evenly;
+}
+.event p {
+    padding: 10px 10px;
+    margin: 0 10px;
+}
+.event h4 {
+    padding: 10px 20px;
+    margin: 0 10px;
+}
+.section_1 {
+    max-width: 100%;
+    /*border: 1px solid black;*/
+    padding: 5px;
+    margin: 5px;
+}
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 180px;
+    border: 2px solid #04773b;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+.contact-cont {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact p {
+    margin: 0;
+    padding-left: 10px;
+    line-height:23px;
+}
+.social {
+    padding: 15px;
+}
+.social-network {
+    padding-right: 5px;
+}
+.social-link.twitter {
+    background-image: url(./Iconos/twitter.png);
+}
+.social-link.facebook {
+    background-image: url(./Iconos/facebook.png);
+}
+.social-link.instagram {
+    background-image: url(./Iconos/instagram.png);
+}
+.social-link.youtube {
+    background-image: url(./Iconos/youtube.png);
+}
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 10px 10px;
+    background-size: 50px 50px;
+}
+.footer {
+    font-weight: bold;
+    color: black;
+    justify-content: center;
+    text-align: center;
+}
+.footer a {
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
+.article {
+    display: flex;
+    height: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+.chart {
+    width: 70px;
+}
+.chart_1 {
+    width: 43px;
+}
+.chart_s {
+    width: 28px;
+}
+.chart_c {
+    width: 75px;
+    height: 23px;
+}
+.chart_del {
+    width: 100px;
+    height: 23px;
+}
+.months {
+    display:flex;
+}
+.intro {
+    text-align: justify;
+}
+.theory-p {
+    text-align: justify;
+}
+.img-intro {
+    max-width: 1000px;
+    max-height: 560px;
+    width: 100%;
+    height: 100%;
+}
+@media screen and (max-width: 1702px){
+    body {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .menu > ul > li > a {
+        margin: 0 70px;
+    }
+}
+@media screen and (max-width: 1365px){
+    .calculus {
+        display: block;
+    }
+    .event {
+        width: 100%;
+    }
+    .event {
+        width: 100%;
+    }
+    .event_img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 1248px){
+    .menu > ul > li > a {
+        font-size: 23px;
+        margin: 0 35px;
+    }
+    h1 {
+        font-size: 1.7em;
+    }
+    h2 {
+        font-size: 1.3em;
+    }
+}
+@media screen and (max-width: 940px){
+    .menu > ul > li > a {
+        margin: 0 15px;
+        font-size: 21px;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1em;
+    }
+    p {
+        font-size: 14px;
+    }
+    .section_1 {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 850px){
+    .section_1 {
+        max-width: 100%;
+    }
+    .cont_1 {
+        display: block;
+    }
+}
+@media screen and (max-width: 730px){
+    .contact {
+        display: block;
+        height: auto;
+        /*padding: 1.5em 0;*/
+        text-align: center;
+    }
+    .contact-cont {
+        display: flow-root;
+    }
+    .social {
+        padding: 0; 
+    }
+    .contact p {
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 678px){
+    .header {
+        height: 250px;
+    }
+    .header ul {
+        display: block;
+    }
+    .menu > ul > li > a {
+        margin: 0 5px;
+    }
+    .cont_1 {
+        display: block;
+    }
+    .section_1 {
+        max-width: 100%;
+    }
+    .menu ul>li>ul>li>a {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-right: 10px;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 420px){
+    .chart {
+        width: 45px;
+    }
+}
+@media screen and (max-width: 390px){
+    body {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .section_1 {
+        padding: 0px;
+        margin: 0px;
+    }
+    .event {
+        margin: 0;
+        border: 1px solid #04773b;
+    }
+    .event p {
+        padding: 0px 0px;
+        margin: 0 0px;
+    }
+    .event h4 {
+        padding: 10px 5px;
+        margin: 0 10px;
+    }
+}
